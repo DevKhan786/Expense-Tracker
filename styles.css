@@ -1,0 +1,182 @@
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --main-color: purple;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+h1{
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+h3, header, ul{
+  margin-bottom: 0.5rem;
+}
+
+main {
+  max-width: 400px;
+  margin: 1rem auto;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  background-color: var(--main-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header div {
+  padding: 5px;
+}
+
+header div:first-child {
+  flex-basis: 100%;
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+header div:nth-child(n + 2) {
+  flex-basis: 50%;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+header h5 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+form input:not(#type),
+form button {
+  width: 100%;
+padding: 10px;
+border: 1px solid black;
+border-radius: 10px;
+margin-bottom: 5px;
+height: 42px;
+
+
+}
+
+form button{
+  background-color: var(--main-color);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.1);
+}
+
+form label{
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+
+
+form div:first-child {
+  flex-basis: 100%;
+}
+
+form div:nth-child(n + 2) {
+  flex-basis: calc(50%-5px);
+}
+
+ul{
+  list-style-type: none;
+}
+
+ul li{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 5px 10px;
+  position: relative;
+}
+
+ul li:hover{
+  background: rgb(173, 173, 173);
+}
+
+.name{
+  flex: 1;
+}
+
+.name h4{
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.name p{
+  font-size: 0.8rem;
+  color:grey;
+}
+
+.amount{
+  font-weight: 600;
+}
+
+#status{
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.amount.income{
+  color: yellowgreen;
+}
+
+.amount.expense{
+  color: red;
+}
+
+.action{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  color: #fff;
+  height: 100%;
+  width: 50px;
+  display: grid;
+  place-items: center;
+  transform: scaleX(0);
+  transition-duration: 200ms;
+  transform-origin: right;
+}
+
+.action svg{
+  width: 36px;
+  height: 36px;
+}
+
+ul li:hover .action{
+  transform: scaleX(1);
+}
